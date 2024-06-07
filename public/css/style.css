@@ -252,7 +252,7 @@ footer {
 
 @media (max-width: 425px) {
   nav {
-    width: 102%;
+    width: 100%;
   }
   .index-img {
     width: 160px;
@@ -305,13 +305,24 @@ footer {
 @media (max-width: 375px) {
   .book {
     padding: 45px;
+    height: 65vh;
+  }
+  nav{
+    width: 100%;
+  }
+  footer{
+    box-sizing: border-box;
   }
   .addform {
     width: 80vw;
   }
   .preview {
-    height: 95vh;
+    height: 75vh;
+    padding: 1rem 1rem;
     margin: 1rem 0;
+  }
+  .content-about,  .content-view{
+    height: 85vh;
   }
   .remove-page {
     height: 81vh;
@@ -319,7 +330,6 @@ footer {
   .cover {
     margin-right: 1rem;
   }
-
   .index-img {
     width: 160px;
   }
