@@ -1,6 +1,5 @@
 # BookLogs
-
-BookLogs is a web application that allows users to track non-fiction books they have read, along with their notes, ratings, and reading dates. The project is inspired by Derek Sivers' book tracking concept.
+A web book library app suggesting you some good readable books
 
 ## Features
 
