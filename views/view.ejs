@@ -1,0 +1,23 @@
+<%- include('header.ejs') %>
+<div class="content">
+  <div class="preview">
+    <div class="view-cover">
+      <img
+        class="view-img"
+        src="https://covers.openlibrary.org/b/isbn/<%=book.isbn%>-L.jpg"
+        alt="Book CoverImage"
+      />
+      <span class="view-text">
+        <div class="title" id="view-title"><%= book.title %></div>
+        <div class="date" id="view-date">Date read: <%= book.date_added.toString().substring(4, 15)%></div>
+        <div class="note" id="view-note"><%=book.note %></div>
+      </span>
+      <button id="update-btn"><a href="/edit/<%= book.title %>">Update </a></button>
+      <button id="delete-btn"><a href="/delete/<%= book.title %>">Delete </a></button>
+    </div>
+    <div class="btns">
+      <a class="back" href="/"><button  id="submit">Back</button></a>
+    </div>
+  </div>
+</div>
+<%- include('footer.ejs') %>

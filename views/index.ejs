@@ -1,0 +1,26 @@
+  <%- include('header.ejs') %>
+ 
+    <div class="content">
+      <% books.forEach(book => { %>
+      <div class="book">
+        <div class="cover">
+            <img class="index-img"
+            src="https://covers.openlibrary.org/b/isbn/<%=book.isbn%>-M.jpg"
+            alt="Book CoverImage"
+            />
+        </div>
+        <div class="text">
+            <div class="title"><%= book.title %></div>
+            <div class="date">Date read: <%= book.date_added%></div>
+            <div class="note"><%=book.note.substring(0, 215)%>...</div>
+        </div>
+        <form action="/view/<%= book.title %>" method="post">
+          <input type="hidden" name="bookid" value="<%= book.id %>" >
+          <button class="btn view-btn" id="submit" type="submit">View</button>
+        </form>
+      </div>
+      <hr>
+      <% }); %>
+    </div>
+    <%- include('footer.ejs') %>
+
